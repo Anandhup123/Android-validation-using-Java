@@ -40,8 +40,6 @@ public class MainActivity2 extends AppCompatActivity {
                 if (error()){
                     Toast.makeText(MainActivity2.this, "Validation Sucessfull...!", Toast.LENGTH_LONG).show();
                 }
-
-
             }
         });
 
@@ -75,6 +73,5 @@ public class MainActivity2 extends AppCompatActivity {
         }
         return true;
     }
-
 
 }
