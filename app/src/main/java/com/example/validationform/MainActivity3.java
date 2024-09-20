@@ -45,7 +45,7 @@ public class MainActivity3 extends AppCompatActivity {
                         Gender = "Please Select any Gender ";
                     }
                     Toast.makeText(MainActivity3.this, Gender, Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(MainActivity3.this, MainActivity2.class);
+                    Intent i = new Intent(MainActivity3.this, MainActivity4.class);
                     startActivity(i);
                 }else {
                     Toast.makeText(MainActivity3.this, "Please confirm the terms and Conditions", Toast.LENGTH_SHORT).show();

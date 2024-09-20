@@ -27,11 +27,11 @@ public class MainActivity4 extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(sol1.isChecked()){
+                if(sol2.isChecked()){
                     Toast.makeText(MainActivity4.this, "Correct Answer", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(MainActivity4.this, MainActivity2.class);
                     startActivity(i);
-                }else if(sol2.isChecked() || sol3.isChecked()){
+                }else if(sol1.isChecked() || sol3.isChecked()){
                     Toast.makeText(MainActivity4.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(MainActivity4.this, "Select any Answer", Toast.LENGTH_SHORT).show();
