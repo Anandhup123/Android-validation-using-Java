@@ -10,34 +10,36 @@
     android:gravity="center">
 
   <RadioGroup
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="vertical">
-
+      android:orientation="horizontal"
+      android:gravity="center">
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Male"
         android:id="@+id/male"/>
-
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="female"
+        android:text="Female"
         android:id="@+id/female"/>
-
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Others"
         android:id="@+id/others"/>
-
   </RadioGroup>
+  <CheckBox
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="COnfirm Submission"
+      android:id="@+id/confirm"/>
 
   <Button
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Submit"
-      android:id="@+id/submit"/>
+      android:id="@+id/submitting"/>
 
   </LinearLayout>

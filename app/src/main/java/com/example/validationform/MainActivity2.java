@@ -20,6 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         name = findViewById(R.id.txtname);
         email = findViewById(R.id.txtemail);
         password = findViewById(R.id.txtpassword);
@@ -39,6 +40,8 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 if (error()){
                     Toast.makeText(MainActivity2.this, "Validation Sucessfull...!", Toast.LENGTH_LONG).show();
+
+
                 }
             }
         });
