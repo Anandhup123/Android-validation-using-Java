@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity4 extends AppCompatActivity {
-    RadioButton sol1,sol2,sol3;
+    RadioButton sol1,sol2,sol3,common;
     Button btn;
-
+    RadioGroup RadioGroup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,19 +23,26 @@ public class MainActivity4 extends AppCompatActivity {
         sol2 = findViewById(R.id.sol2);
         sol3 = findViewById(R.id.sol3);
 
+        RadioGroup = findViewById(R.id.radioGroup);
+
+
+        int Radioids = RadioGroup.getCheckedRadioButtonId();
+
         btn = findViewById(R.id.submit);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(sol2.isChecked()){
+                if(Radioids == -1){
+                    Toast.makeText(MainActivity4.this, "Seleect any Answer", Toast.LENGTH_SHORT).show();
+                }
+
+                common = findViewById(Radioids);
+
+                if(common.equals("7")){
                     Toast.makeText(MainActivity4.this, "Correct Answer", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(MainActivity4.this, MainActivity2.class);
-                    startActivity(i);
-                }else if(sol1.isChecked() || sol3.isChecked()){
-                    Toast.makeText(MainActivity4.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(MainActivity4.this, "Select any Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity4.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         String email = etEmail.getText().toString().trim();
         String phone = etPhone.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
+
         int selectedGenderId = radioGroupGender.getCheckedRadioButtonId();
+
         boolean isTermsChecked = cbTerms.isChecked();
 
         // Reset all backgrounds to default
